@@ -1,0 +1,18 @@
+{
+  "vae": {
+    "median_nn_similarity": 0.8658204674720764,
+    "min_nn_similarity": 0.6267011761665344
+  },
+  "ddpm": {
+    "median_nn_similarity": 0.8849866390228271,
+    "min_nn_similarity": 0.6625289916992188
+  },
+  "shown_sample_nn_similarity": [
+    0.8953,
+    0.9047,
+    0.8793,
+    0.901,
+    0.9145,
+    0.8325
+  ]
+}

@@ -1,0 +1,43 @@
+# Dependencies for the minimal VAE + DDPM project.
+#
+#   pip install -r requirements.txt
+#
+# Six packages, and only four of them do any work. There is deliberately no
+# VAE library, no diffusion library and no FID/IS package: the point of the
+# task is that those are implemented here from primitives.
+#
+# The version on each line is a FLOOR -- the oldest release that has the API
+# this code calls. The comment after it is the version actually used for the
+# numbers in REPORT.md, on Python 3.11.5, Windows 11, CUDA 12.6.
+#
+# NOTE ON TORCH. The line below installs the default wheel, which on Linux and
+# Windows is the CUDA build and on macOS is CPU-only. If you want a specific
+# CUDA version, install torch first from the PyTorch index and then run this
+# file, which will leave the existing torch alone:
+#
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+#   pip install -r requirements.txt
+
+# The models themselves: every layer in vae.py and ddpm.py is built from these.
+# >=2.3 because the training loops use the `torch.amp.GradScaler("cuda")` API,
+# which replaced `torch.cuda.amp.GradScaler` in that release.
+torch>=2.3                  # tested with 2.14.0+cu126
+
+# Two uses only: the pretrained InceptionV3 weights that FID and IS are defined
+# against, and the image transforms in data.py. No torchvision model is used as
+# a generator.
+torchvision>=0.18           # tested with 0.29.0+cu126
+
+# Seeding, and the array handling around the FID covariance.
+numpy>=1.24                 # tested with 2.4.6
+
+# One function: scipy.linalg.sqrtm, the matrix square root in the Frechet
+# distance. There is no reasonable way to write a stable one by hand.
+scipy>=1.10                 # tested with 1.17.1
+
+# Reading CelebA JPEGs and writing the generated PNGs.
+pillow>=9.0                 # tested with 12.3.0
+
+# Progress bars. The only cosmetic dependency -- deleting every `tqdm(...)`
+# wrapper would leave the project functionally identical.
+tqdm>=4.60                  # tested with 4.70.1

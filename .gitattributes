@@ -1,0 +1,22 @@
+# Line endings: normalise text files in the repo, leave binaries untouched.
+# Specific rules below override this one, so it has to come first.
+* text=auto
+
+# Binary assets -- never line-ending-converted, never diffed as text.
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.pptx  binary
+
+# ---------------------------------------------------------------------------
+# Git LFS
+#
+# Model checkpoints only. runs/ddpm/last.pt is 138 MB on its own, past
+# GitHub's 100 MB hard limit for an ordinary blob, and the three checkpoints
+# together are ~208 MB of the repo's ~230 MB.
+#
+# Requires `git lfs install` once per machine, and an LFS-enabled remote.
+# LFS applies only to commits made after this rule exists -- a checkpoint
+# already committed as a normal blob stays in history until it is rewritten.
+# ---------------------------------------------------------------------------
+*.pt  filter=lfs diff=lfs merge=lfs -text

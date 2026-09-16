@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1902" viewBox="0 0 1500 1902" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+    <marker id="arSkip" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0891b2"/>
+    </marker>
+    <marker id="arFwd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arRev" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arT" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <rect width="1500" height="1902" fill="#ffffff"/>
+
+  <!-- ===================================================================== -->
+  <!-- PANEL A  -  the two processes                                         -->
+  <!-- ===================================================================== -->
+  <text x="40" y="44" font-size="23" font-weight="700" fill="#0f172a">A · The two processes — forward is fixed, reverse is learned</text>
+
+  <text x="180" y="96" font-size="15" fill="#dc2626" font-weight="600">forward q  (fixed, no parameters):  add a small amount of Gaussian noise at each of T = 1000 steps</text>
+
+  <!-- forward arrows (top) -->
+  <line x1="190" y1="118" x2="310" y2="118" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arFwd)"/>
+  <line x1="420" y1="118" x2="540" y2="118" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arFwd)"/>
+  <line x1="650" y1="118" x2="770" y2="118" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arFwd)"/>
+  <line x1="880" y1="118" x2="1000" y2="118" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arFwd)"/>
+  <line x1="1110" y1="118" x2="1230" y2="118" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arFwd)"/>
+
+  <!-- image squares -->
+  <rect x="90"   y="136" width="100" height="100" rx="6" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <rect x="320"  y="136" width="100" height="100" rx="6" fill="#f1f5f9" stroke="#334155" stroke-width="2"/>
+  <rect x="550"  y="136" width="100" height="100" rx="6" fill="#e2e8f0" stroke="#334155" stroke-width="2"/>
+  <rect x="780"  y="136" width="100" height="100" rx="6" fill="#cbd5e1" stroke="#334155" stroke-width="2"/>
+  <rect x="1010" y="136" width="100" height="100" rx="6" fill="#94a3b8" stroke="#334155" stroke-width="2"/>
+  <rect x="1240" y="136" width="100" height="100" rx="6" fill="#64748b" stroke="#334155" stroke-width="2"/>
+
+  <text x="140"  y="180" font-size="14" text-anchor="middle" fill="#0f172a" font-weight="700">clean</text>
+  <text x="140"  y="200" font-size="13" text-anchor="middle" fill="#0f172a">face</text>
+  <text x="370"  y="192" font-size="13" text-anchor="middle" fill="#0f172a">grainy</text>
+  <text x="600"  y="192" font-size="13" text-anchor="middle" fill="#0f172a">blurry</text>
+  <text x="830"  y="192" font-size="13" text-anchor="middle" fill="#0f172a">shape only</text>
+  <text x="1060" y="192" font-size="13" text-anchor="middle" fill="#ffffff">almost noise</text>
+  <text x="1290" y="192" font-size="13" text-anchor="middle" fill="#ffffff" font-weight="700">pure noise</text>
+
+  <text x="140"  y="258" font-size="16" text-anchor="middle" fill="#0f172a" font-weight="700">x₀</text>
+  <text x="370"  y="258" font-size="16" text-anchor="middle" fill="#0f172a">x₁</text>
+  <text x="600"  y="258" font-size="16" text-anchor="middle" fill="#0f172a">x₁₀₀</text>
+  <text x="830"  y="258" font-size="16" text-anchor="middle" fill="#0f172a">x₅₀₀</text>
+  <text x="1060" y="258" font-size="16" text-anchor="middle" fill="#0f172a">x₉₀₀</text>
+  <text x="1290" y="258" font-size="16" text-anchor="middle" fill="#0f172a" font-weight="700">x₁₀₀₀ ~ N(0, I)</text>
+
+  <text x="140"  y="278" font-size="12" text-anchor="middle" fill="#64748b">ᾱ = 1.000</text>
+  <text x="370"  y="278" font-size="12" text-anchor="middle" fill="#64748b">ᾱ = 0.9998</text>
+  <text x="600"  y="278" font-size="12" text-anchor="middle" fill="#64748b">ᾱ = 0.895</text>
+  <text x="830"  y="278" font-size="12" text-anchor="middle" fill="#64748b">ᾱ = 0.078</text>
+  <text x="1060" y="278" font-size="12" text-anchor="middle" fill="#64748b">ᾱ = 0.00027</text>
+  <text x="1290" y="278" font-size="12" text-anchor="middle" fill="#64748b">ᾱ = 0.00004</text>
+
+  <!-- reverse arrows (bottom) -->
+  <line x1="310"  y1="302" x2="190"  y2="302" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arRev)"/>
+  <line x1="540"  y1="302" x2="420"  y2="302" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arRev)"/>
+  <line x1="770"  y1="302" x2="650"  y2="302" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arRev)"/>
+  <line x1="1000" y1="302" x2="880"  y2="302" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arRev)"/>
+  <line x1="1230" y1="302" x2="1110" y2="302" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arRev)"/>
+  <text x="180" y="332" font-size="15" fill="#16a34a" font-weight="600">reverse p<tspan font-size="11" dy="3">θ</tspan><tspan dy="-3">  (learned):  one U-Net evaluation per step, T evaluations per generated image</tspan></text>
+
+  <rect x="40" y="350" width="1420" height="34" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="56" y="373" font-size="14" fill="#78350f">The closed form  x_t = √ᾱ_t · x₀ + √(1−ᾱ_t) · ε  gives direct access to any t, so the chain is never simulated during training. Sampling must traverse it step by step.</text>
+
+  <!-- ===================================================================== -->
+  <!-- PANEL B  -  U-Net                                                     -->
+  <!-- ===================================================================== -->
+  <line x1="40" y1="410" x2="1460" y2="410" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="40" y="448" font-size="23" font-weight="700" fill="#0f172a">B · The noise-prediction network  ε<tspan font-size="15" dy="4">θ</tspan><tspan dy="-4">(x_t, t)</tspan>  —  U-Net, 17.2M params, 64×64×3 in → 64×64×3 out</text>
+
+  <!-- time embedding box -->
+  <rect x="40" y="476" width="216" height="118" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="148" y="500" font-size="15" text-anchor="middle" font-weight="700" fill="#4c1d95">time embedding</text>
+  <text x="52" y="524" font-size="13" fill="#4c1d95">t (int, 0…999)</text>
+  <text x="52" y="544" font-size="13" fill="#4c1d95">→ Sinusoidal(64)</text>
+  <text x="52" y="564" font-size="13" fill="#4c1d95">→ Linear 64→256 → SiLU</text>
+  <text x="52" y="584" font-size="13" fill="#4c1d95">→ Linear 256→256</text>
+  <circle cx="148" cy="614" r="13" fill="#7c3aed"/>
+  <text x="148" y="619" font-size="13" text-anchor="middle" fill="#fff" font-weight="700">t</text>
+  <line x1="148" y1="627" x2="148" y2="1014" stroke="#7c3aed" stroke-width="2" stroke-dasharray="5,4"/>
+  <text x="132" y="1022" font-size="12" fill="#7c3aed" transform="rotate(-90 132 1022)">t_emb (256-d) reaches every ResBlock</text>
+
+  <!-- input / stem -->
+  <rect x="300" y="476" width="230" height="52" rx="8" fill="#f1f5f9" stroke="#334155" stroke-width="2"/>
+  <text x="415" y="498" font-size="14" text-anchor="middle" font-weight="700" fill="#0f172a">input  x_t</text>
+  <text x="415" y="517" font-size="13" text-anchor="middle" fill="#475569">3 × 64 × 64</text>
+
+  <rect x="580" y="476" width="230" height="52" rx="8" fill="#f1f5f9" stroke="#334155" stroke-width="2"/>
+  <text x="695" y="498" font-size="14" text-anchor="middle" font-weight="700" fill="#0f172a">stem: Conv 3×3</text>
+  <text x="695" y="517" font-size="13" text-anchor="middle" fill="#475569">3 → 64 ch,  64 × 64</text>
+  <line x1="530" y1="502" x2="576" y2="502" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+  <path d="M 695 528 L 695 556 L 452 556 L 452 592" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- ENCODER -->
+  <text x="478" y="586" font-size="14" font-weight="700" fill="#1d4ed8">ENCODER (down path)</text>
+
+  <rect x="300" y="596" width="304" height="74" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="314" y="618" font-size="14" font-weight="700" fill="#1e3a8a">DownLevel 0   ·   64 × 64</text>
+  <text x="314" y="638" font-size="13" fill="#1e3a8a">2 × ResBlock  64 → 64</text>
+  <text x="314" y="657" font-size="13" fill="#1e3a8a">Downsample (stride-2 conv) → 32²</text>
+  <circle cx="586" cy="615" r="11" fill="#7c3aed"/><text x="586" y="620" font-size="12" text-anchor="middle" fill="#fff" font-weight="700">t</text>
+
+  <rect x="300" y="700" width="304" height="74" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="314" y="722" font-size="14" font-weight="700" fill="#1e3a8a">DownLevel 1   ·   32 × 32</text>
+  <text x="314" y="742" font-size="13" fill="#1e3a8a">2 × ResBlock  64 → 128</text>
+  <text x="314" y="761" font-size="13" fill="#1e3a8a">Downsample → 16²</text>
+  <circle cx="586" cy="719" r="11" fill="#7c3aed"/><text x="586" y="724" font-size="12" text-anchor="middle" fill="#fff" font-weight="700">t</text>
+
+  <rect x="300" y="804" width="304" height="74" rx="8" fill="#fce7f3" stroke="#db2777" stroke-width="2.5"/>
+  <text x="314" y="826" font-size="14" font-weight="700" fill="#9d174d">DownLevel 2   ·   16 × 16</text>
+  <text x="314" y="846" font-size="13" fill="#9d174d">2 × [ ResBlock 128→128  +  Self-Attn ]</text>
+  <text x="314" y="865" font-size="13" fill="#9d174d">Downsample → 8²</text>
+  <circle cx="586" cy="823" r="11" fill="#7c3aed"/><text x="586" y="828" font-size="12" text-anchor="middle" fill="#fff" font-weight="700">t</text>
+
+  <rect x="300" y="908" width="304" height="74" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="314" y="930" font-size="14" font-weight="700" fill="#1e3a8a">DownLevel 3   ·   8 × 8</text>
+  <text x="314" y="950" font-size="13" fill="#1e3a8a">2 × ResBlock  128 → 256</text>
+  <text x="314" y="969" font-size="13" fill="#1e3a8a">no downsample (last level)</text>
+  <circle cx="586" cy="927" r="11" fill="#7c3aed"/><text x="586" y="932" font-size="12" text-anchor="middle" fill="#fff" font-weight="700">t</text>
+
+  <line x1="452" y1="670" x2="452" y2="696" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="452" y1="774" x2="452" y2="800" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="452" y1="878" x2="452" y2="904" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- BOTTLENECK -->
+  <rect x="560" y="1020" width="400" height="82" rx="8" fill="#fef08a" stroke="#ca8a04" stroke-width="2.5"/>
+  <text x="760" y="1044" font-size="15" text-anchor="middle" font-weight="700" fill="#713f12">BOTTLENECK   ·   256 ch @ 8 × 8</text>
+  <text x="760" y="1066" font-size="13" text-anchor="middle" fill="#713f12">ResBlock  →  Self-Attention  →  ResBlock</text>
+  <text x="760" y="1086" font-size="12" text-anchor="middle" fill="#854d0e">2.76M params (16%) — lowest resolution, where attention is cheapest</text>
+  <circle cx="936" cy="1040" r="11" fill="#7c3aed"/><text x="936" y="1045" font-size="12" text-anchor="middle" fill="#fff" font-weight="700">t</text>
+
+  <path d="M 452 982 L 452 1061 L 556 1061" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+  <path d="M 960 1061 L 1092 1061 L 1092 986" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- DECODER -->
+  <text x="940" y="586" font-size="14" font-weight="700" fill="#15803d">DECODER (up path)</text>
+
+  <rect x="940" y="596" width="304" height="74" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="954" y="618" font-size="14" font-weight="700" fill="#14532d">UpLevel 0   ·   64 × 64</text>
+  <text x="954" y="638" font-size="13" fill="#14532d">3 × [ cat(skip) → ResBlock → 64 ]</text>
+  <text x="954" y="657" font-size="13" fill="#14532d">no upsample (top level)</text>
+  <circle cx="1226" cy="615" r="11" fill="#7c3aed"/><text x="1226" y="620" font-size="12" text-anchor="middle" fill="#fff" font-weight="700">t</text>
+
+  <rect x="940" y="700" width="304" height="74" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="954" y="722" font-size="14" font-weight="700" fill="#14532d">UpLevel 1   ·   32 × 32</text>
+  <text x="954" y="742" font-size="13" fill="#14532d">3 × [ cat(skip) → ResBlock → 128 ]</text>
+  <text x="954" y="761" font-size="13" fill="#14532d">Upsample (nearest + conv) → 64²</text>
+  <circle cx="1226" cy="719" r="11" fill="#7c3aed"/><text x="1226" y="724" font-size="12" text-anchor="middle" fill="#fff" font-weight="700">t</text>
+
+  <rect x="940" y="804" width="304" height="74" rx="8" fill="#fce7f3" stroke="#db2777" stroke-width="2.5"/>
+  <text x="954" y="826" font-size="14" font-weight="700" fill="#9d174d">UpLevel 2   ·   16 × 16</text>
+  <text x="954" y="846" font-size="13" fill="#9d174d">3 × [ cat → ResBlock 128 + Self-Attn ]</text>
+  <text x="954" y="865" font-size="13" fill="#9d174d">Upsample → 32²</text>
+  <circle cx="1226" cy="823" r="11" fill="#7c3aed"/><text x="1226" y="828" font-size="12" text-anchor="middle" fill="#fff" font-weight="700">t</text>
+
+  <rect x="940" y="908" width="304" height="74" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="954" y="930" font-size="14" font-weight="700" fill="#14532d">UpLevel 3   ·   8 × 8</text>
+  <text x="954" y="950" font-size="13" fill="#14532d">3 × [ cat(skip) → ResBlock → 256 ]</text>
+  <text x="954" y="969" font-size="13" fill="#14532d">Upsample → 16²</text>
+  <circle cx="1226" cy="927" r="11" fill="#7c3aed"/><text x="1226" y="932" font-size="12" text-anchor="middle" fill="#fff" font-weight="700">t</text>
+
+  <line x1="1092" y1="904" x2="1092" y2="882" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="1092" y1="800" x2="1092" y2="778" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="1092" y1="696" x2="1092" y2="674" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- output head -->
+  <rect x="940" y="476" width="304" height="52" rx="8" fill="#f1f5f9" stroke="#334155" stroke-width="2"/>
+  <text x="1092" y="497" font-size="14" text-anchor="middle" font-weight="700" fill="#0f172a">head: GroupNorm → SiLU → Conv 3×3</text>
+  <text x="1092" y="516" font-size="13" text-anchor="middle" fill="#475569">64 → 3 ch   (zero-init ⇒ predicts ε = 0 at step 0)</text>
+  <line x1="1092" y1="592" x2="1092" y2="532" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+
+  <rect x="1270" y="476" width="190" height="52" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="1365" y="497" font-size="14" text-anchor="middle" font-weight="700" fill="#7f1d1d">output  ε̂</text>
+  <text x="1365" y="516" font-size="13" text-anchor="middle" fill="#7f1d1d">3 × 64 × 64</text>
+  <line x1="1248" y1="502" x2="1266" y2="502" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- SKIP CONNECTIONS -->
+  <line x1="608" y1="633" x2="936" y2="633" stroke="#0891b2" stroke-width="2.5" stroke-dasharray="8,5" marker-end="url(#arSkip)"/>
+  <line x1="608" y1="737" x2="936" y2="737" stroke="#0891b2" stroke-width="2.5" stroke-dasharray="8,5" marker-end="url(#arSkip)"/>
+  <line x1="608" y1="841" x2="936" y2="841" stroke="#0891b2" stroke-width="2.5" stroke-dasharray="8,5" marker-end="url(#arSkip)"/>
+  <line x1="608" y1="945" x2="936" y2="945" stroke="#0891b2" stroke-width="2.5" stroke-dasharray="8,5" marker-end="url(#arSkip)"/>
+
+  <rect x="640" y="612" width="266" height="20" rx="4" fill="#ffffff"/>
+  <text x="773" y="627" font-size="12" text-anchor="middle" fill="#0e7490" font-weight="600">skips: 64, 64, 64 @ 64²  (3rd = stem out)</text>
+  <rect x="640" y="716" width="266" height="20" rx="4" fill="#ffffff"/>
+  <text x="773" y="731" font-size="12" text-anchor="middle" fill="#0e7490" font-weight="600">skips: 128, 128, 64 @ 32²</text>
+  <rect x="640" y="820" width="266" height="20" rx="4" fill="#ffffff"/>
+  <text x="773" y="835" font-size="12" text-anchor="middle" fill="#0e7490" font-weight="600">skips: 128, 128, 128 @ 16²</text>
+  <rect x="640" y="924" width="266" height="20" rx="4" fill="#ffffff"/>
+  <text x="773" y="939" font-size="12" text-anchor="middle" fill="#0e7490" font-weight="600">skips: 256, 256, 128 @ 8²</text>
+
+  <rect x="40" y="1030" width="345" height="64" rx="8" fill="#ecfeff" stroke="#0891b2" stroke-width="1.6"/>
+  <text x="54" y="1052" font-size="12.5" font-weight="700" fill="#0e7490">12 skip tensors in total</text>
+  <text x="54" y="1070" font-size="12" fill="#0e7490">Encoder pushes them onto a stack; the decoder</text>
+  <text x="54" y="1086" font-size="12" fill="#0e7490">pops LIFO and concatenates on the channel axis.</text>
+
+  <!-- ===================================================================== -->
+  <!-- PANEL C  -  block internals                                           -->
+  <!-- ===================================================================== -->
+  <line x1="40" y1="1130" x2="1460" y2="1130" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="40" y="1168" font-size="23" font-weight="700" fill="#0f172a">C · Block internals</text>
+
+  <!-- ResBlock -->
+  <text x="40" y="1204" font-size="15" font-weight="700" fill="#1e3a8a">ResBlock(x, t_emb)  —  the only place the timestep enters</text>
+
+  <!-- time path into ResBlock -->
+  <rect x="330" y="1220" width="200" height="40" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.6"/>
+  <text x="430" y="1235" font-size="12" text-anchor="middle" fill="#4c1d95">SiLU → Linear 256 → C'</text>
+  <text x="430" y="1252" font-size="12" text-anchor="middle" fill="#4c1d95">reshape (B, C', 1, 1)</text>
+  <line x1="400" y1="1260" x2="400" y2="1284" stroke="#7c3aed" stroke-width="2" marker-end="url(#arT)"/>
+  <text x="540" y="1245" font-size="12" fill="#7c3aed">← t_emb, added as a per-channel bias</text>
+
+  <rect x="40" y="1284" width="120" height="46" rx="6" fill="#f1f5f9" stroke="#64748b" stroke-width="1.6"/>
+  <text x="100" y="1312" font-size="13" text-anchor="middle" fill="#0f172a">x  (B,C,H,W)</text>
+  <line x1="160" y1="1307" x2="192" y2="1307" stroke="#475569" stroke-width="1.8" marker-end="url(#ar)"/>
+  <rect x="196" y="1284" width="150" height="46" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.6"/>
+  <text x="271" y="1305" font-size="13" text-anchor="middle" fill="#1e3a8a">GroupNorm → SiLU</text>
+  <text x="271" y="1322" font-size="13" text-anchor="middle" fill="#1e3a8a">→ Conv 3×3</text>
+  <line x1="346" y1="1307" x2="378" y2="1307" stroke="#475569" stroke-width="1.8" marker-end="url(#ar)"/>
+  <circle cx="400" cy="1307" r="20" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="400" y="1313" font-size="18" text-anchor="middle" fill="#4c1d95" font-weight="700">+</text>
+  <line x1="420" y1="1307" x2="452" y2="1307" stroke="#475569" stroke-width="1.8" marker-end="url(#ar)"/>
+  <rect x="456" y="1284" width="170" height="46" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.6"/>
+  <text x="541" y="1305" font-size="13" text-anchor="middle" fill="#1e3a8a">GroupNorm → SiLU</text>
+  <text x="541" y="1322" font-size="13" text-anchor="middle" fill="#1e3a8a">→ Dropout → Conv 3×3</text>
+  <line x1="626" y1="1307" x2="658" y2="1307" stroke="#475569" stroke-width="1.8" marker-end="url(#ar)"/>
+  <circle cx="680" cy="1307" r="20" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+  <text x="680" y="1313" font-size="18" text-anchor="middle" fill="#713f12" font-weight="700">+</text>
+  <line x1="700" y1="1307" x2="732" y2="1307" stroke="#475569" stroke-width="1.8" marker-end="url(#ar)"/>
+  <rect x="736" y="1284" width="130" height="46" rx="6" fill="#f1f5f9" stroke="#64748b" stroke-width="1.6"/>
+  <text x="801" y="1312" font-size="13" text-anchor="middle" fill="#0f172a">out (B,C',H,W)</text>
+
+  <!-- residual path -->
+  <path d="M 100 1330 L 100 1372 L 680 1372 L 680 1331" fill="none" stroke="#ca8a04" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#ar)"/>
+  <text x="330" y="1389" font-size="12" fill="#854d0e">residual path: Identity, or 1×1 Conv when the channel count changes</text>
+
+  <rect x="890" y="1272" width="570" height="132" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+  <text x="906" y="1294" font-size="13" font-weight="700" fill="#78350f">Normalisation and initialisation constraints</text>
+  <text x="906" y="1318" font-size="12.5" fill="#78350f">1. conv2 and the output head are <tspan font-weight="700">zero-initialised</tspan> → each block starts as the identity.</text>
+  <text x="906" y="1340" font-size="12.5" fill="#78350f">2. <tspan font-weight="700">GroupNorm, not BatchNorm</tspan> — sampling runs at batch size 1, where batch</text>
+  <text x="922" y="1358" font-size="12.5" fill="#78350f">statistics are unreliable.</text>
+  <text x="906" y="1378" font-size="12.5" fill="#78350f">3. ≥2 channels per GN group. With 1, GroupNorm reduces to InstanceNorm and</text>
+  <text x="922" y="1396" font-size="12.5" fill="#78350f">removes the per-channel constant t_emb just added, cancelling the conditioning.</text>
+
+  <!-- Self-Attention -->
+  <text x="40" y="1442" font-size="15" font-weight="700" fill="#9d174d">SelfAttention(x)  —  used at 16×16 and at the 8×8 bottleneck only (cost is O((HW)²))</text>
+  <rect x="40" y="1456" width="120" height="46" rx="6" fill="#f1f5f9" stroke="#64748b" stroke-width="1.6"/>
+  <text x="100" y="1484" font-size="13" text-anchor="middle" fill="#0f172a">x  (B,C,H,W)</text>
+  <line x1="160" y1="1479" x2="192" y2="1479" stroke="#475569" stroke-width="1.8" marker-end="url(#ar)"/>
+  <rect x="196" y="1456" width="160" height="46" rx="6" fill="#fce7f3" stroke="#db2777" stroke-width="1.6"/>
+  <text x="276" y="1477" font-size="13" text-anchor="middle" fill="#9d174d">GroupNorm</text>
+  <text x="276" y="1494" font-size="13" text-anchor="middle" fill="#9d174d">→ Conv 1×1 → Q,K,V</text>
+  <line x1="356" y1="1479" x2="388" y2="1479" stroke="#475569" stroke-width="1.8" marker-end="url(#ar)"/>
+  <rect x="392" y="1456" width="170" height="46" rx="6" fill="#fce7f3" stroke="#db2777" stroke-width="1.6"/>
+  <text x="477" y="1477" font-size="13" text-anchor="middle" fill="#9d174d">flatten to N = H·W</text>
+  <text x="477" y="1494" font-size="13" text-anchor="middle" fill="#9d174d">tokens, each C-dim</text>
+  <line x1="562" y1="1479" x2="594" y2="1479" stroke="#475569" stroke-width="1.8" marker-end="url(#ar)"/>
+  <rect x="598" y="1456" width="200" height="46" rx="6" fill="#fce7f3" stroke="#db2777" stroke-width="1.6"/>
+  <text x="698" y="1477" font-size="13" text-anchor="middle" fill="#9d174d">A = softmax(QᵀK / √C)</text>
+  <text x="698" y="1494" font-size="13" text-anchor="middle" fill="#9d174d">(N × N), rows sum to 1</text>
+  <line x1="798" y1="1479" x2="830" y2="1479" stroke="#475569" stroke-width="1.8" marker-end="url(#ar)"/>
+  <rect x="834" y="1456" width="150" height="46" rx="6" fill="#fce7f3" stroke="#db2777" stroke-width="1.6"/>
+  <text x="909" y="1477" font-size="13" text-anchor="middle" fill="#9d174d">A·V → reshape</text>
+  <text x="909" y="1494" font-size="13" text-anchor="middle" fill="#9d174d">→ Conv 1×1 (zero-init)</text>
+  <line x1="984" y1="1479" x2="1016" y2="1479" stroke="#475569" stroke-width="1.8" marker-end="url(#ar)"/>
+  <circle cx="1038" cy="1479" r="20" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+  <text x="1038" y="1485" font-size="18" text-anchor="middle" fill="#713f12" font-weight="700">+</text>
+  <path d="M 100 1502 L 100 1534 L 1038 1534 L 1038 1503" fill="none" stroke="#ca8a04" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#ar)"/>
+  <line x1="1058" y1="1479" x2="1090" y2="1479" stroke="#475569" stroke-width="1.8" marker-end="url(#ar)"/>
+  <rect x="1094" y="1456" width="130" height="46" rx="6" fill="#f1f5f9" stroke="#64748b" stroke-width="1.6"/>
+  <text x="1159" y="1484" font-size="13" text-anchor="middle" fill="#0f172a">out (B,C,H,W)</text>
+  <text x="1240" y="1472" font-size="12" fill="#64748b">Convolutions are local; attention</text>
+  <text x="1240" y="1488" font-size="12" fill="#64748b">enforces agreement between</text>
+  <text x="1240" y="1504" font-size="12" fill="#64748b">distant regions of the image.</text>
+
+  <!-- ===================================================================== -->
+  <!-- PANEL D  -  train vs sample                                           -->
+  <!-- ===================================================================== -->
+  <line x1="40" y1="1564" x2="1460" y2="1564" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="40" y="1600" font-size="23" font-weight="700" fill="#0f172a">D · Training (one step, parallel) vs. Sampling (T steps, sequential)</text>
+
+  <rect x="40" y="1620" width="690" height="256" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="60" y="1648" font-size="16" font-weight="700" fill="#1e3a8a">TRAINING — one gradient step</text>
+  <text x="60" y="1676" font-size="13.5" fill="#1e3a8a">1.  x₀ ← batch of real faces, scaled to [−1, 1]</text>
+  <text x="60" y="1700" font-size="13.5" fill="#1e3a8a">2.  t  ← Uniform{0, …, 999}, <tspan font-style="italic">independently per image</tspan></text>
+  <text x="60" y="1724" font-size="13.5" fill="#1e3a8a">3.  ε  ← N(0, I),  same shape as x₀</text>
+  <text x="60" y="1748" font-size="13.5" fill="#1e3a8a">4.  x_t = √ᾱ_t · x₀ + √(1−ᾱ_t) · ε      ← one multiply-add, no chain</text>
+  <text x="60" y="1772" font-size="13.5" fill="#1e3a8a">5.  L = ‖ ε − ε<tspan font-size="10" dy="3">θ</tspan><tspan dy="-3">(x_t, t) ‖²      ← plain MSE, one term</tspan></text>
+  <text x="60" y="1796" font-size="13.5" fill="#1e3a8a">6.  Adam step (lr 2e-4, 500-step warm-up, grad-clip 1.0)</text>
+  <text x="60" y="1820" font-size="13.5" fill="#1e3a8a">7.  EMA update of the weights (decay → 0.9999, warmed in)</text>
+  <text x="60" y="1850" font-size="12.5" fill="#1d4ed8">Reference values: a network that always outputs 0 scores exactly 1.0;</text>
+  <text x="60" y="1867" font-size="12.5" fill="#1d4ed8">a converged CelebA run settles at 0.02–0.03.</text>
+
+  <rect x="770" y="1620" width="690" height="256" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="790" y="1648" font-size="16" font-weight="700" fill="#14532d">SAMPLING — one image, T sequential U-Net calls</text>
+  <text x="790" y="1676" font-size="13.5" fill="#14532d">1.  x_T ← N(0, I)</text>
+  <text x="790" y="1700" font-size="13.5" fill="#14532d">2.  for t = T−1 … 0:</text>
+  <text x="810" y="1724" font-size="13.5" fill="#14532d">a. ε̂ = ε<tspan font-size="10" dy="3">θ</tspan><tspan dy="-3">(x_t, t)</tspan></text>
+  <text x="810" y="1748" font-size="13.5" fill="#14532d">b. x̂₀ = (x_t − √(1−ᾱ_t)·ε̂) / √ᾱ_t,  then <tspan font-weight="700">clamp to [−1,1]</tspan></text>
+  <text x="810" y="1772" font-size="13.5" fill="#14532d">c. μ = c₁(t)·x̂₀ + c₂(t)·x_t   (posterior mean)</text>
+  <text x="810" y="1796" font-size="13.5" fill="#14532d">d. x_{t−1} = μ + σ_t·z,  z ~ N(0,I);  at t = 0 return μ</text>
+  <text x="790" y="1828" font-size="12.5" fill="#15803d">DDIM: the objective constrains only the marginals q(x_t|x₀), so a reverse process</text>
+  <text x="790" y="1845" font-size="12.5" fill="#15803d">may <tspan font-style="italic">skip</tspan> timesteps. 50 steps instead of 1000 is a 20× reduction in cost.</text>
+  <text x="790" y="1867" font-size="12.5" fill="#15803d">η = 0 → deterministic (fixed seed ⇒ fixed output);  η = 1 → ancestral DDPM.</text>
+
+</svg>
