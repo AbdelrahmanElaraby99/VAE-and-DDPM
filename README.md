@@ -1,4 +1,4 @@
-# Minimal VAE + DDPM on CelebA
+# VAE + DDPM on CelebA
 
 A plain Variational Autoencoder and an unconditional Denoising Diffusion
 Probabilistic Model, both written from scratch in PyTorch, trained on CelebA
